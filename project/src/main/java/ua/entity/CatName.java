@@ -17,8 +17,6 @@ import ua.service.CatNameService;
 @Table(indexes=@Index(columnList = "name"))
 public class CatName {
 	@Id
-	@Autowired
-	private CatNameService catNameService;
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String name;
@@ -57,20 +55,5 @@ public class CatName {
 //	public void setAmountAndItem(List<AmountAndItem> amountAndItem) {
 //		this.amountAndItem = amountAndItem;
 //	}
-	@RequestMapping("/admin/catName")
-	public String show(Model model){
-		model.addAttribute("catName", catNameService.findAll());
-		return "admincatName";
-	}
-	@RequestMapping(value="/admin/catName", method=RequestMethod.POST)
-	public String save(@RequestParam CatName catName){
-		catNameService.save(catName);/////????????
-		return "redirect:/admin/catName";
-	}
 	
-	@RequestMapping("/admin/ingredient/delete/{id}")
-	public String delete(@PathVariable int id){
-		catNameService.delete(id);
-		return "redirect:/admin/ingredient";
-	}
 }
