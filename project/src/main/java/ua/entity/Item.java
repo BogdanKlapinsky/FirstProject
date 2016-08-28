@@ -16,7 +16,15 @@ public class Item {
 	private CountryName countryName;
 	@OneToMany(mappedBy="item")
 	private List<MyOrder> myOrders=new ArrayList<>();
-	
+	@OneToMany(mappedBy="item")
+//	private List<AmountAndItem> amountAndItem= new ArrayList<>();
+//	
+//	public List<AmountAndItem> getAmountAndItem() {
+//		return amountAndItem;
+//	}
+//	public void setAmountAndItem(List<AmountAndItem> amountAndItem) {
+//		this.amountAndItem = amountAndItem;
+//	}
 	public int getId() {
 		return id;
 	}
@@ -49,6 +57,6 @@ public class Item {
 	}
 	public void setMyOrders(List<MyOrder> myOrders) {
 		this.myOrders = myOrders;
-	}
+		}
 	
 }

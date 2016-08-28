@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.persistence.*;
 @Entity
-//@Table(indexes=@Index(columnList = "name"))
+@Table(indexes=@Index(columnList = "name"))
 public class CountryName{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

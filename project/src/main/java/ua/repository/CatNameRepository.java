@@ -6,4 +6,6 @@ import ua.entity.CatName;
 
 public interface CatNameRepository  extends JpaRepository<CatName, Integer>{
 
+	CatName findByName(String name);
+
 }
