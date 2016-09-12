@@ -12,29 +12,22 @@ import ua.repository.CountryNameRepository;
 public class CountryNameServiceImpl implements CountryNameService {
 	@Autowired
 	private CountryNameRepository countryNameRepository;
-
 	@Override
 	public void save(String name) {
 		CountryName countryName = new CountryName();
 		countryName.setName(name);
 		countryNameRepository.save(countryName);
 		}
-
 	@Override
-	public CountryName findByName(String name) {
-		
+	public CountryName findByName(String name){
 		return countryNameRepository.findByName(name);
 	}
-
 	@Override
 	public void delete(int id) {
-		countryNameRepository.delete(id);
-		
+		countryNameRepository.delete(id);	
 	}
-
 	@Override
 	public List<CountryName> findAll() {
-		
 		return countryNameRepository.findAll();
 	}
 

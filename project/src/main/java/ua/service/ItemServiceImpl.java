@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import ua.entity.CatName;
 import ua.entity.Item;
 import ua.repository.ItemRepository;
 
@@ -20,13 +21,15 @@ public class ItemServiceImpl implements ItemService {
 	@Override
 	public void save(String name) {
 	Item item = new Item();
-//	item.setCatName(name);
-//	itemRepository.save(catName);		
+    item.setName(name);
+ 	itemRepository.save(item);		
 	}
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
-		
+		itemRepository.delete(id);
 	}
-
+	//@Override
+//	public void save(CatName catName) {
+//		
+//	}
 }

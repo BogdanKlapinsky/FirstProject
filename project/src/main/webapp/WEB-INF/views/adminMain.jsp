@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href = "/admin/addCountry"><h1>Admin add country</h1></a>
+<a href = "/admin/countryName"><h1>Admin add country</h1></a>
 <a href = "/admin/addCatName"><h1>Admin add category name</h1></a>
 <a href = "/admin/addClientName"><h1>Admin add client name</h1></a>
 <a href = "/admin/addItemName"><h1>Admin add item name</h1></a>

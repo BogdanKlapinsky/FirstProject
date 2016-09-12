@@ -20,6 +20,7 @@
 <c:if test="${param.fail eq true}">
 	<p>Fail to authorize</p>
 </c:if>
+<a href="/login">Login</a>
 <security:authorize access="isAuthenticated() and hasRole('ROLE_ADMIN')">
 <button id="asdfr">Hi</button>
 <button onclick="generator()">Generate</button>
@@ -76,7 +77,7 @@
 </script>
  
 <a href = "/admin"><h1>Admin panel</h1></a>
-<a href = "/admin/addCountry"><h1>Admin add country</h1></a>
+<a href = "/admin/countryName"><h1>Admin add country</h1></a>
 <a href = "/admin/addCatName"><h1>Admin add category name</h1></a>
 <a href = "/admin/addClientName"><h1>Admin add client name</h1></a>
 <a href = "/admin/addItemName"><h1>Admin add item name</h1></a>

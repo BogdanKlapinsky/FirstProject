@@ -9,6 +9,13 @@ public class Item {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	private String name;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	private int quantity;
 	@ManyToOne(fetch=FetchType.LAZY)
 	private CatName catName;

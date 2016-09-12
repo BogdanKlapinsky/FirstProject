@@ -13,20 +13,24 @@ import ua.service.CountryNameServiceImpl;
 public class CountryController {
 	@Autowired
 	private CountryNameService countryNameService;
-	
-	@RequestMapping("/adminPanel/countryName")
+	@RequestMapping("/admin/countryName")
 	public String showCountry(Model model){
 		model.addAttribute("countries", countryNameService.findAll());
 		return "countryName";
 	}
-	@RequestMapping("/adminPanel/countryName/delete/{id}")
-	public String deleteClient(@PathVariable int id){
+	@RequestMapping("/admin/countryName/delete/{id}")
+	public String deleteCountry(@PathVariable int id){
 		countryNameService.delete(id);
-		return "redirect:/adminPanel/countryName";
+		return "redirect:/admin/countryName";
 	}
-	@RequestMapping(value = "/adminPanel/country", method = RequestMethod.POST)
-	public String showCountry(@RequestParam String name){
+	@RequestMapping(value="/admin/countryName", method=RequestMethod.POST)
+	public String saveCountry(@PathVariable String name){
 		countryNameService.save(name);
-		return "redirect:/adminPanel/countryName";
+		return "redirect:/admin/countryName";
 	}
+//	@RequestMapping(value = "/admin/countryName", method = RequestMethod.POST)
+//	public String showCountry(@RequestParam String name){
+//		countryNameService.save(name);
+//		return "redirect:/admin/countryName";
+//	}
 }

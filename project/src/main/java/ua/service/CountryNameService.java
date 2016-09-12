@@ -6,5 +6,4 @@ public interface CountryNameService {
 	CountryName findByName(String name);
 	public void delete(int id);
 	List<CountryName> findAll();
-	
 }

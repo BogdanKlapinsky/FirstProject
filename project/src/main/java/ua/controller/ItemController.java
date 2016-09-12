@@ -7,23 +7,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import ua.entity.CatName;
 import ua.service.ItemService;;
-//рефактор JSP
-//як підключити гілку
-//
 @Controller
-public class ItemController {
+public class ItemController{
 	@Autowired
 	private ItemService itemService;
 	@RequestMapping("/admin/addItemName")
 	public String show(Model model){
-		model.addAttribute("item", itemService.findAll());
+		model.addAttribute("items", itemService.findAll());
 		return "adminAddItemName";
 		}
 	@RequestMapping(value="/admin/addItemName", method=RequestMethod.POST)
 	public String save(@RequestParam String name){
 		itemService.save(name);
-		return "redirect:/addCatNAme/addItemName";
+		return "redirect:/admin/addItemName";
 	}
 	@RequestMapping("/admin/addItemName/delete/{id}")
 	public String delete(@PathVariable int id){

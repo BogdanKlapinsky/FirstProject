@@ -14,29 +14,29 @@
 		<put-attribute name="body" value="/WEB-INF/views/addCatNamePanel.jsp" />
 	</definition>
 	<definition name="index" extends="common">
-		<put-attribute name="title" value="index" />
-		<put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+		<put-attribute name="title" value="index"/>
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp"/>
 	</definition>
 	<definition name="adminPanel" extends="common">
 		<put-attribute name="title" value="index" />
-		<put-attribute name="body" value="/WEB-INF/views/adminPanel.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/adminPanel.jsp"/>
 	</definition>
 	<definition name="countryName" extends="common">
 		<put-attribute name="title" value="index" />
-		<put-attribute name="body" value="/WEB-INF/views/CountryName.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/CountryName.jsp"/>
 	</definition>
 	<definition name="adminClientNamePanel" extends="common">
-		<put-attribute name="title" value="index" />
-		<put-attribute name="body" value="/WEB-INF/views/addClientNamePanel.jsp" />
+		<put-attribute name="title" value="index"/>
+		<put-attribute name="body" value="/WEB-INF/views/addClientNamePanel.jsp"/>
 	</definition>
 	
 	<definition name="adminAddItemName" extends="common">
-		<put-attribute name="title" value="index" />
-		<put-attribute name="body" value="/WEB-INF/views/adminAddItemName.jsp" />
+		<put-attribute name="title" value="index"/>
+		<put-attribute name="body" value="/WEB-INF/views/adminAddItemName.jsp"/>
 	</definition>
 	
 	<definition name="login" extends="common">
-		<put-attribute name="title" value="index" />
+		<put-attribute name="title" value="index"/>
 		<put-attribute name="body" value="/WEB-INF/views/Login.jsp" />
 	</definition>
 </tiles-definitions>
