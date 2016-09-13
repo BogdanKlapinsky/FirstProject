@@ -26,6 +26,7 @@
 <button onclick="generator()">Generate</button>
 <input id="asdf" onblur="asdf(event)">
 <a href="/admin">Admin panel</a>
+<a href="/user">User panel</a>
 <script>
 	$(document).ready(function () {
 		$('#asdfr').click(function() {
