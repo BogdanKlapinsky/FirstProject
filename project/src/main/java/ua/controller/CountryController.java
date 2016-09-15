@@ -24,7 +24,7 @@ public class CountryController {
 		return "redirect:/admin/countryName";
 	}
 	@RequestMapping(value="/admin/countryName", method=RequestMethod.POST)
-	public String saveCountry(@PathVariable String name){
+	public String saveCountry(@RequestParam String name){
 		countryNameService.save(name);
 		return "redirect:/admin/countryName";
 	}

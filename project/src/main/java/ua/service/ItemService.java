@@ -11,4 +11,5 @@ public interface ItemService {
 	List<Item> findAll()  ;
 	void delete(int id)   ;
 	void save(String name);	
+	//Item findByName(String name);
 }

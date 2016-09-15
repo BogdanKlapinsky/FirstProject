@@ -6,4 +6,6 @@ import ua.entity.Item;
 
 public interface ItemRepository extends JpaRepository<Item, Integer> {
 
+	Item findByName(String name);
+
 }

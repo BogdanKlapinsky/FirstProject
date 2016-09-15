@@ -32,4 +32,9 @@ public class ItemServiceImpl implements ItemService {
 //	public void save(CatName catName) {
 //		
 //	}
+//	@Override	
+//	public Item findByName(String name) {
+//		return itemRepository.findByName(name);
+//		
+//	}
 }

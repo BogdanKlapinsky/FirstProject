@@ -2,7 +2,7 @@ package ua.form;
 
 import ua.entity.CountryName;
 
-public class ItemForm {
+public class ItemFilter {
 	private int id;
 	private CountryName countryName;
 	private String name;
