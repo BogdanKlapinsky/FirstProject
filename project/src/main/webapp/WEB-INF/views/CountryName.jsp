@@ -45,17 +45,33 @@
 			<div class="col-md-4"><h4>Delete</h4></div>
 			<div class="col-md-4"><h4>Update</h4></div>
 			<c:forEach items="${page.content}" var="country">
-				<div class="col-md-4">${country.name}</div>
-					<div class="col-md-4">
-						<a href="/admin/countryName/delete/${name.id}<custom:allParams/>">delete</a>
+				<div class="col-md-4 col-xs-4">${country.name}</div>
+					<div class="col-md-4 col-xs-4">
+						<a href="/admin/countryName/delete/${country.id}<custom:allParams/>">delete</a>
 					</div>
-					<div class="col-md-4">
-						<a href="/admin/countryName/update/${name.id}<custom:allParams/>">update</a>
+					<div class="col-md-4 col-xs-4">
+						<a href="/admin/countryName/update/${country.id}<custom:allParams/>">update</a>
 					</div>
 			</c:forEach>
 			<div class="col-md-12 text-center">
 				<custom:pageable page="${page}" cell="<li></li>" container="<ul class='pagination'></ul>" />
 			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="col-md-6">
+				<div class="dropdown">
+				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<custom:sort innerHtml="Name asc" paramValue="name"/>
+						<custom:sort innerHtml="Name desc" paramValue="name,desc"/>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<custom:size posibleSizes="1,2,5,10" size="${page.size}" title="Page size"/>
+			</div>
+			
 		</div>
 	</div>
 
@@ -67,7 +83,7 @@
 
 
 
-	<form action="/admin/countryName" method="post">
+<!--	<form action="/admin/countryName" method="post">
 		<table>
 			<tr><td><input name="name"></td></tr>
 			<tr><td><input type="submit"></td></tr>
@@ -84,4 +100,4 @@
 			</c:forEach>
 	</table>
 </body>
-</html>
+</html>-->
