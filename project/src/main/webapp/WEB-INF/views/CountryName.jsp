@@ -45,11 +45,11 @@
 			<div class="col-md-4"><h4>Delete</h4></div>
 			<div class="col-md-4"><h4>Update</h4></div>
 			<c:forEach items="${page.content}" var="country">
-				<div class="col-md-4 col-xs-4">${country.name}</div>
-					<div class="col-md-4 col-xs-4">
+				<div class="col-md-4">${country.name}</div>
+					<div class="col-md-4">
 						<a href="/admin/countryName/delete/${country.id}<custom:allParams/>">delete</a>
 					</div>
-					<div class="col-md-4 col-xs-4">
+					<div class="col-md-4">
 						<a href="/admin/countryName/update/${country.id}<custom:allParams/>">update</a>
 					</div>
 			</c:forEach>
